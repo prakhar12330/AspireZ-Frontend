@@ -15,6 +15,7 @@ import Steeper from "./component/Steeper";
 import locales from "./assets/locales";
 import { useState } from "react";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import Landing from "./component/Landing";
 
 function App() {
   const [activeStep, setActiveStep] = useState(0);
@@ -23,6 +24,9 @@ function App() {
     setActiveStep(activeStep + 1);
   };
   return (
+    
+    // <Landing/>
+    
     <Box
       sx={{
         width: '100%',
@@ -111,7 +115,7 @@ function App() {
           </Button>
         </Box>
       </Box>
-    </Box>
+    </Box> 
   );
 }
 
