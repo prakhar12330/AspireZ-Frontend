@@ -2,12 +2,11 @@ import {
   Box,
   Typography,
   Button,
-  Stepper,
-  Step,
-  StepLabel,
 } from "@mui/material";
-import logo from './logo.svg';
 import boywithphone from './assets/boywithphone.jpg';
+import relaxingWomen from './assets/relaxingWomen.svg';
+import checklist from './assets/checklist.svg';
+import nerd from './assets/nerd.svg';
 import './App.css';
 import Screen1 from "./screens/Screen1";
 import Screen2 from "./screens/Screen2";
@@ -19,6 +18,10 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 
 function App() {
   const [activeStep, setActiveStep] = useState(0);
+
+  const nextStep = () => {
+    setActiveStep(activeStep + 1);
+  };
   return (
     <Box
       sx={{
@@ -33,12 +36,24 @@ function App() {
         sx={{
           textAlign: 'center',
         }}>
-        <img height={180} src={boywithphone}/>
+        {activeStep + 1 === 1 && (
+          <img height={180} src={boywithphone} alt={' '}/>
+        )}
+        {activeStep + 1 === 2 && (
+          <img height={210} src={relaxingWomen} alt={' '} />
+        )}
+        {activeStep + 1 === 3 && (
+          <img height={200} src={checklist} alt={' '} />
+        )}
+        {activeStep + 1 === 4 && (
+          <img height={150} src={nerd} alt={' '} />
+        )}
+
         <Box sx={{
-            textAlign:'center',
-            width:350,
-            margin: '40px auto',
-            overflow: "hidden",
+          textAlign: 'center',
+          width: 350,
+          margin: '40px auto',
+          overflow: "hidden",
 
         }}>
           <Steeper activeStep={activeStep + 1} />
@@ -46,7 +61,7 @@ function App() {
         <Box>
           {activeStep + 1 === 4 && (
             <CheckCircleIcon
-              sx={{ width: 100, height: 100, color: "#6767ec" }}
+              sx={{ width: 50, height: 50, color: "#6767ec" }}
             />
           )}
         </Box>
@@ -60,23 +75,23 @@ function App() {
           >
             {" "}
             {locales[activeStep + 1]?.title}{" "}
-            
+
           </Typography>
           <Typography variant="p" color="#888" fontWeight="400">
             {" "}
             {locales[activeStep + 1]?.subTitle}{" "}
-  
+
           </Typography>
         </Box>
         <Box sx={{ textAlign: "left", width: 350, margin: "0 auto" }}>
           {activeStep + 1 === 1 && (
-            <Screen1/>
+            <Screen1 />
           )}
           {activeStep + 1 === 2 && (
             <Screen2 />
           )}
           {activeStep + 1 === 3 && (
-            <Screen3/>
+            <Screen3 />
           )}
           <Button
             variant="contained"
@@ -88,11 +103,11 @@ function App() {
               padding: 1,
             }}
             fullWidth
-            onClick={activeStep + 1 < 4}
+            onClick={activeStep + 1 < 4 && nextStep}
           >
             {activeStep + 1 < 4
               ? "Continue"
-              : `Launch `}
+              : "Log In"}
           </Button>
         </Box>
       </Box>

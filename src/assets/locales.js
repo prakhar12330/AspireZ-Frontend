@@ -2,24 +2,20 @@ const locales = {
     1: {
         title: "Books in 15 minutes",
         subTitle: "We read the best books, highlight key ideas and insights, create summaries and visual narrative for you",
-        input1: "Full Name",
-        input2: "Display Name",
         optional: false,
     },
     2: {
-        title: "Let's set up a home for all your work",
-        subTitle: "You can always create another workspace later.",
-        input1: "Workspace Name",
-        input2: "Workspace URL",
+        title: "Read, listen and watch anywhere",
+        subTitle: "You can read, listen and watch at the same time without the Internet connection",
         optional: true,
     },
     3: {
-        title: "How are you planning to use",
-        subTitle: "We'll streamline your setup experience accordingly.",
+        title: "Personal reading plan",
+        subTitle: "Set your reading goals and accept a personalized challenge",
     },
     4: {
-        title: "Congratulations,",
-        subTitle: "You have completed onboarding, you can start using the",
+        title: "Learning becomes fun and easy",
+        subTitle: "Log in to personalize your experience and track your progress",
     },
 };
 
