@@ -1,5 +1,4 @@
 import { Button, Box, Typography} from "@mui/material";
-import WavingHandIcon from '@mui/icons-material/WavingHand';
 import { MdOutlineWavingHand } from "react-icons/md";
 import { TbMichelinBibGourmand } from "react-icons/tb";
 
