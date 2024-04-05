@@ -6,7 +6,6 @@ import {
 } from "@mui/material";
 import boywithphone from '../../assets/boywithphone.jpg';
 import relaxingWomen from '../../assets/relaxingWomen.svg';
-import checklist from '../../assets/checklist.svg';
 import nerd from '../../assets/nerd.svg';
 import Screen1 from "../../screens/Screen1";
 import Screen2 from "../../screens/Screen2";
@@ -15,9 +14,6 @@ import Steeper from "../../component/Steeper";
 import locales from "../../assets/locales";
 import { useState } from "react";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-
-
-
 
 
 const Onboarding = () => {
@@ -50,9 +46,6 @@ const Onboarding = () => {
               {activeStep + 1 === 3 && (
                   <img height={200} src={nerd} alt={' '} />
               )}
-              {/* {activeStep + 1 === 4 && (
-                  <img height={150} src={nerd} alt={' '} />
-              )} */}
 
               <Box sx={{
                   textAlign:'center',

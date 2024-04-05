@@ -6,7 +6,7 @@ import Onboarding from './component/Onboarding';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import { useState } from 'react';
-import Home from './pages/Home';
+import Home from './component/Home/Home';
 
 function App() {
 
@@ -19,7 +19,7 @@ function App() {
         <Route path="/login" element={<Login setAuth={setAuth} />} />
         <Route path="/signup" element={<Signup setAuth={setAuth} />} />
         <Route
-          path="/"
+          path="/home"
           element={
             auth ? (
               <Home setAuth={setAuth} />
