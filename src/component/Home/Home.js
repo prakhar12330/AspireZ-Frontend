@@ -1,45 +1,64 @@
-import { Button, Typography, Container} from "@mui/material";
-import { useTheme } from "@mui/material/styles";
+import { Button, Box, Typography} from "@mui/material";
+import WavingHandIcon from '@mui/icons-material/WavingHand';
+import { MdOutlineWavingHand } from "react-icons/md";
+import { TbMichelinBibGourmand } from "react-icons/tb";
 
 const Home = ({ setAuth }) => {
-    const theme = useTheme();
+
 
     return (
-        <Container
-            maxWidth="lg"
+        <Box
             sx={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                flexDirection: "column",
-                height: "100vh",
+                width: '100%',
+                height: '100vh',
+                overflow: 'hidden',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
             }}
         >
+            <Box sx={{ textAlign: 'center' }}>
+                <TbMichelinBibGourmand style={{ fontSize: '8rem' }} />
+           </Box>
             
-            <Typography
-                sx={{
-                    textAlign: "center",
-                    marginTop: "-4rem",
-                    fontSize: "5rem",
-                    fontWeight: 700,
-                    letterSpacing: "-0.5rem",
-                    display: "inline-block",
-                    whiteSpace: "nowrap",
-                    [theme.breakpoints.down("sm")]: {
-                        fontSize: "4rem",
-                        letterSpacing: "-0.4rem",
-                    },
-                }}
-                gutterBottom
-            >
-                Welcome Back
-            </Typography>
+            <Box sx={{ textAlign: 'center' }}>
+                <Box mt={3} mb={5}>
+                    <Typography
+                        variant="h5"
+                        color="#222"
+                        fontWeight="600"
+                        fontSize={{ xs: "1.3rem", sm: "1.3rem", md: "1.5rem" }}
+                        mt={2}
+                    >
+                        Glad to have you with us, <span style={{ color: 'blue' }}>Prakhar Singh</span> <MdOutlineWavingHand style={{ color: 'black', fontSize: '2rem', marginLeft: '10px' }} />
+                    </Typography>
 
-            <Button size="large" variant="contained" onClick={() => setAuth(false)}>
-                Log out
-            </Button>
-        </Container>
+                </Box>
+                
+            </Box>
+            <Box sx={{ textAlign: 'center', mt: 4 }}>
+                <Button
+                    variant="contained"
+                    sx={{
+                        backgroundColor: '#2A64F6',
+                        '&:hover': {
+                            backgroundColor: '#D3D3D3',
+                        },
+                        padding: 1,
+                        width: 200,
+                        color: 'white',
+                        fontWeight: 'medium',
+                    }}
+                    onClick={() => setAuth(false)}
+                >
+                    Continue
+                </Button>
+            </Box>
+        </Box>
     );
 };
 
 export default Home;
+
+
