@@ -48,15 +48,15 @@ const Onboarding = () => {
                   <img height={210} src={relaxingWomen} alt={' '} />
               )}
               {activeStep + 1 === 3 && (
-                  <img height={200} src={checklist} alt={' '} />
+                  <img height={200} src={nerd} alt={' '} />
               )}
-              {activeStep + 1 === 4 && (
+              {/* {activeStep + 1 === 4 && (
                   <img height={150} src={nerd} alt={' '} />
-              )}
+              )} */}
 
               <Box sx={{
-                  textAlign: 'center',
-                  width: 350,
+                  textAlign:'center',
+                  width: 250,
                   margin: '40px auto',
                   overflow: "hidden",
 
@@ -64,7 +64,7 @@ const Onboarding = () => {
                   <Steeper activeStep={activeStep + 1} />
               </Box>
               <Box>
-                  {activeStep + 1 === 4 && (
+                  {activeStep + 1 === 3 && (
                       <CheckCircleIcon
                           sx={{ width: 50, height: 50, color: "#6767ec" }}
                       />
@@ -82,13 +82,9 @@ const Onboarding = () => {
                       {locales[activeStep + 1]?.title}{" "}
 
                   </Typography>
-                  <Typography variant="p" color="#888" fontWeight="400">
-                      {" "}
-                      {locales[activeStep + 1]?.subTitle}{" "}
-
-                  </Typography>
+                  
               </Box>
-              <Box sx={{ textAlign: "left", width: 350, margin: "0 auto" }}>
+              <Box sx={{ textAlign: "center", width: 350, margin: "0 auto" }}>
                   {activeStep + 1 === 1 && (
                       <Screen1 />
                   )}
@@ -108,9 +104,9 @@ const Onboarding = () => {
                           padding: 1,
                       }}
                       fullWidth
-                      onClick={activeStep + 1 < 4 && nextStep}
+                      onClick={activeStep + 1 < 3 && nextStep}
                   >
-                      {activeStep + 1 < 4
+                      {activeStep + 1 < 3
                           ? "Continue"
                           : "Log In"}
                   </Button>

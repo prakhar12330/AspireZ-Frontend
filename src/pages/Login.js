@@ -36,7 +36,7 @@ const fadeInUp = {
     animate: {
         y: 0,
         opacity: 1,
-        transition: {
+        transition: { 
             duration: 0.6,
             ease: easing,
         },

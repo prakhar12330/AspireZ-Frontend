@@ -10,7 +10,7 @@ const Steeper = ({ activeStep }) => {
                 margin: "0 auto",
             }}
         >
-            {[1, 2, 3, 4].map((value, index) => {
+            {[1, 2, 3].map((value, index) => {
                 return (
                     <Box
                         key={index}
@@ -30,7 +30,7 @@ const Steeper = ({ activeStep }) => {
                         >
                             {value}
                         </Avatar>
-                        {value < 4 && (
+                        {value < 3 && (
                             <Box
                                 sx={{
                                     width: { xs: 80, sm: 90, md: 100 },
