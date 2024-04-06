@@ -50,6 +50,7 @@ const Home = ({ setAuth }) => {
                         fontWeight: 'medium',
                     }}
                     onClick={() => setAuth(false)}
+                    href='/home/age'
                 >
                     Continue
                 </Button>

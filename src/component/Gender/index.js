@@ -5,12 +5,12 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Typography from '@mui/material/Typography';
-import { FaChild } from "react-icons/fa";
+import { MdOutlineTransgender } from "react-icons/md";
 
-const Age = () => {
+const Gender = () => {
     const [input, setinput] = useState({
 
-        age: 0,
+        gender:'none'
     });
 
     const handler = (e) => {
@@ -43,7 +43,7 @@ const Age = () => {
                         fontSize={{ xs: "1.3rem", sm: "1.3rem", md: "1.5rem" }}
                         mt={2}
                     >
-                        What is your <span style={{ color: 'blue' }}>Age</span>? <FaChild style={{ color: 'black', fontSize: '3rem', marginLeft: '1px' }} />
+                        What is your <span style={{ color: 'blue' }}>Gender</span>? <MdOutlineTransgender style={{ color: 'black', fontSize: '3rem', marginLeft: '1px' }} />
                     </Typography>
 
                 </Box>
@@ -64,19 +64,17 @@ const Age = () => {
                             }}
                             fullWidth
                         >
-                            <InputLabel>Age</InputLabel>
+                            <InputLabel>Gender</InputLabel>
                             <Select
-                                name="age"
-                                value={input.age}
-                                label="Age"
+                                name="gender"
+                                value={input.gender}
+                                label="Gender"
                                 onChange={handler}
                                 sx={{ margin: 3 }}
                             >
-                                <MenuItem value={10}>Less than 18</MenuItem>
-                                <MenuItem value={20}>18 - 23</MenuItem>
-                                <MenuItem value={30}>24 - 30</MenuItem>
-                                <MenuItem value={20}>30 - 40</MenuItem>
-                                <MenuItem value={30}>Above 40</MenuItem>
+                                <MenuItem value={10}>Male</MenuItem>
+                                <MenuItem value={20}>Female</MenuItem>
+                                <MenuItem value={30}>Other</MenuItem>
                             </Select>
                         </FormControl>
 
@@ -93,7 +91,6 @@ const Age = () => {
                                 fontWeight: 'medium',
                             }}
                             type="submit"
-                            href='/home/gender'
                         >
                             Submit
                         </Button>
@@ -104,5 +101,5 @@ const Age = () => {
     );
 }
 
-export default Age;
+export default Gender;
 

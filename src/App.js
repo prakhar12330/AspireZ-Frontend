@@ -8,6 +8,7 @@ import Signup from './pages/Signup';
 import Age from './component/Age';
 import { useState } from 'react';
 import Home from './component/Home/Home';
+import Gender from './component/Gender';
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
         }
       />
       <Route path="/home/age" element={<Age />} />
+      <Route path="/home/gender" element={<Gender />} />
     </Routes>
 
   );
