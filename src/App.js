@@ -9,6 +9,7 @@ import Age from './component/Age';
 import { useState } from 'react';
 import Home from './component/Home/Home';
 import Gender from './component/Gender';
+import Goals from './component/Goals';
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
       />
       <Route path="/home/age" element={<Age />} />
       <Route path="/home/gender" element={<Gender />} />
+      <Route path="/home/goals" element={<Goals />} />
     </Routes>
 
   );

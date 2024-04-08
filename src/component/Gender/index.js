@@ -91,6 +91,7 @@ const Gender = () => {
                                 fontWeight: 'medium',
                             }}
                             type="submit"
+                            href='/home/goals'
                         >
                             Submit
                         </Button>
