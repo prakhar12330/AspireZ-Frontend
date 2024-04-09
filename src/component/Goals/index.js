@@ -27,7 +27,7 @@ const Goals = () => {
     return (
         <Box sx={{
             width: '100%',
-            height: '100vh',
+            height: '80vh',
             overflow: 'hidden',
             display: 'flex',
             flexDirection: 'column',
