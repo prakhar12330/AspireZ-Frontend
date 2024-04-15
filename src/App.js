@@ -13,6 +13,7 @@ import Goals from './component/Goals';
 import Screenone from './component/Question/Screenone';
 import Screentwo from './component/Question/Screentwo';
 import Screenthree from './component/Question/Screenthree';
+import Helper  from './Helper';
 
 function App() {
 
@@ -40,6 +41,10 @@ function App() {
       <Route path="/home/screenone" element={<Screenone />} />
       <Route path="/home/screentwo" element={<Screentwo />} />
       <Route path="/home/screenthree" element={<Screenthree />} />
+
+
+      <Route path="/home/avatar" element={<Helper />} />
+
     </Routes>
 
   );
