@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import { Route, Routes, Navigate, useLocation } from 'react-router-dom';
 import Landing from "./component/Landing";
 import Onboarding from './component/Onboarding';
@@ -13,7 +12,7 @@ import Goals from './component/Goals';
 import Screenone from './component/Question/Screenone';
 import Screentwo from './component/Question/Screentwo';
 import Screenthree from './component/Question/Screenthree';
-import Helper  from './Helper';
+import Coach from './component/Coach';
 
 function App() {
 
@@ -42,8 +41,7 @@ function App() {
       <Route path="/home/screentwo" element={<Screentwo />} />
       <Route path="/home/screenthree" element={<Screenthree />} />
 
-
-      <Route path="/home/avatar" element={<Helper />} />
+      <Route path="/home/coach" element={<Coach/>} />
 
     </Routes>
 
